@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Empleo</title>
+</head>
+<body>
+    <section>
+        <form name="frmSolicitud" method="post" action="ContactameServlet">
+            <!--creamos el formulario, post se utiliza para enviar información de forma privada-->
+            <!--tabla 1 SOLICITUD DE EMPLEO-->
+            <table border="1">
+                <tbody>
+                    <tr> <!--Fila 1-->
+                        <td width="500" rowspan="4">
+                                  <h1>Solicitud de empleo</h1>  
+                                  <div align="left">Puesto que solicita</div>
+                                  <br>
+                                  <div align="center">Sea tan amable de llenar esta solicitud en forma manuscrita</div>
+                                  <div align="center">NOTA: Toda informaci&oacute;n aqu&iacute; proporcionada ser&aacute; tratada</div>  
+                                  <div align="center">confidencialmente</div>
+                        </td>
+                        <td >
+                            <label for="lbFecha">Fecha</label>
+                            <br>
+                            <input type="date" name="txtFecha" id="txtFecha">
+                        </td>
+                        <td width="250" rowspan="4">
+                        </td>
+                    </tr>
+                    <tr> <!--Fila 2-->
+                        <td width="250">
+                            <label for="lbSueldo">Sueldo Mensual aprobado</label>
+                            <br>
+                            <input type="number" name="txtSueldo" id="txtSueldo">
+                        </td>
+                    </tr>
+                    <tr> <!--Fila 3-->
+                        <td width="250">       <!-- &_acute; permite colocar acentos-->
+                            <label for="lbFechaContratacion">Fecha de contrataci&oacute;n</label>
+                            <br>
+                            <input type="date" name="txtFechaContratacion" id="txtFechaContratacion">
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <fieldset style="width: 990px">
+                <!--tabla 2 DATOS PERSONALES-->
+                <legend>Datos Generales</legend>
+                <table border="1">
+                
+                    <tr>
+                        <tr><!--Fila 1-->
+                            <td width="9000" colspan="2">
+                                <label for="lbNombres">Apellido Paterno
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apellido Materno
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nombre(s)</label>
+                                    <br>
+                                    <input type="text" widht="500" name="txtNombres" id="txtNombres">
+                            </td>
+                            <td>
+                                <label for="lbEdad">Edad</label>
+                                <input type="number" name="txtEdad" id="txtEdad">
+                                <div align="right">Años</div>
+                            </td>
+                        </tr>
+                        <tr><!--Fila 2-->
+                            <td>
+                                <label for="lbDireccion">Domicilio</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colonia
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&oacute;digo Postal</label>
+                                <br>
+                                <input type="text" widht="500" name="txtDireccion" id="txtDireccion">
+                            </td>
+                            <td>
+                                <label for="lbTelefono">Tel&eacute;fono</label>
+                                <br>
+                                <input type="tel" name="telTelefono" id="telTelefono">
+                            </td>
+                            <td>
+                                <label for="lbSexo">Sexo</label>
+                                <br>
+                                <input type="radio" value="Masculino" name="rdSexoMasculino" id="rdSexoMasculino">Masculino
+                                <br>
+                                <input type="radio" value="Femenino" name="rdSexoFemenino" id="rdSexoFemenino">Femenino
+                            </td>
+                        </tr>
+                        <tr><!--Fila 3-->
+                            <td>
+                                <label for="lbDireccion2">Ciudad, Estado</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lugar de Nacimiento
+                                <br>
+                                <input type="text" widht="500" name="txtDireccion2" id="txtDireccion2">
+                            </td>
+                            <td>
+                                <label for="lbNacimiento">Fecha de Nacimiento</label>
+                                <br>
+                                <input type="date" name="txtNacimiento" id="txtNacimiento">
+                            </td>
+                            <td>
+                                <label for="lbNacionalidad">Nacionalidad</label>
+                                <input type="text" name="txtNacionalidad" id="txtNacionalidad">
+                            </td>
+
+                        </tr>
+                        <tr><!--Fila 4-->
+                            <td>
+                                <label for="lbviveCon">Vive con</label>
+                                <br>
+                                <input type="radio" value="Padres">Sus Padres
+                                <input type="radio" value="Familia">Su Familia
+                                <input type="radio" value="Parientes">Parientes
+                                <input type="radio" value="Solo">Solo
+                            </td>
+                            <td>
+                                <label for="lbEstatura">Estatura</label>
+                                <br>
+                                <input type="number" name="numEstatura" id="numEstatura">
+                            </td>
+                            <td>
+                                <label for="lbPeso">Peso</label>
+                                <input type="number" name="numPeso" id="numPeso">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 5-->
+                            <td>
+                                <label for="lbDependientes">Personas que dependen de usted</label>
+                                <br>
+                                <input type="radio" value="Padres">Hijos
+                                <input type="radio" value="Familia">Cónyuge
+                                <input type="radio" value="Parientes">Padres
+                                <input type="radio" value="Solo">Otros
+                            </td>
+                            <td colspan="2">
+                                <label for="lbEstadoCivil">Estado Civil</label>
+                                <br>
+                                <input type="radio" value="Soltero">Soltero
+                                <input type="radio" value="Casado">Casado
+                                <input type="radio" value="Otro">Otro
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset style="width: 990px">
+                <!--tabla 3 DOCUMENTACION-->
+                <legend>Documentaci&oacute;n</legend>
+                <table border="1">
+                
+                    <tr>
+                        <tr><!--Fila 1-->
+                            <td width="7000" colspan="2">
+                                <label for="lbCurp">Clave &Uacute;nica de Registro de Poblaci&oacute;n
+                                <br>
+                                <input type="text" widht="500" name="txtCurp" id="txtCurp">
+                            </td>
+                            <td colspan="2">
+                                <label for="lbAfore">AFORE</label>
+                                <br>
+                                <input type="text" name="txtAfore" id="txtAfore">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 2-->
+                            <td>
+                                <label for="lbReg">Reg. Fed de Contribuyentes</label>
+                                <input type="text" name="txtReg" id="txtReg">
+                            </td>
+                            <td>
+                                <label for="lbNss">Numero de Seguridad Social</label>
+                                <input type="number" widht="500" name="numNss" id="numNss">
+                            </td>
+                            <td>
+                                <label for="lbCartilla">Cartilla de Servicio Militar No.</label>
+                                <br>
+                                <input type="text" name="txtCartilla" id="txtCartilla">
+                            </td>
+                            <td>
+                                <label for="lbPasaporte">Pasaporte No.</label>
+                                <br>
+                                <input type="text" name="txtPasaporte" id="txtPasaporte">
+                            </td>
+                            
+                        <tr><!--Fila 3-->
+                            <td>
+                                <label for="lbLicencia">Tiene licencia de Manejo</label>
+                                <br>
+                                <input type="radio" value="si">si
+                                <input type="radio" value="no">no
+                            </td>
+                            <td>
+                                <label for="lbNo_Licencia">Clase y N&uacute;mero de Licencia</label>
+                                <br>
+                                <input type="text" name="txtNo_Licencia" id="txtNo_Licencia">
+                            </td>
+                            <td colspan="2">
+                                <label for="lbExtranjero">Siendo extranjero que documentos le permiten trabajar en el pa&iacute;s</label>
+                                <input type="text" name="txtExtranjero" id="txtExtranjero">
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset style="width: 990px">
+                <!--tabla 4 ESTADO DE SALUD Y HABITOS PERSONALES-->
+                <legend>Estado de Salud y H&aacute;bitos Personales</legend>
+                <table border="1">
+
+                        <tr><!--Fila 1-->
+                            <td width="6000">
+                                <label for="lbEstadoSalud">¿C&oacute;mo considera su estado de salud actual?</label>
+                                    <br>
+                                    <input type="radio" value="Bueno">Bueno
+                                    <input type="radio" value="Regular">Regular
+                                    <input type="radio" value="Malo">Malo
+                            <td colspan="2">
+                                <label for="lbEnfermedad">¿Padece alguna enfermedad Cr&oacute;nica?</label>
+                                <br>
+                                <input type="radio" value="No">No
+                                <br>
+                                <input type="radio" value="Si">Si (Explique)
+                            </td>
+                        </tr>
+                        <tr><!--Fila 2-->
+                            <td>
+                                <label for="lbDeporte">¿Pr&aacute;ctica Ud. alg&uacute;n deporte?</label>
+                                <br>
+                                <input type="text" name="txtDeporte" id="txtDeporte">
+                            </td>
+                            <td>
+                                <label for="lbClub">¿Permanece a alg&uacute;n Club Social o Deportivo?</label>
+                                <input type="text" name="txtClub" id="txtClub">
+                            </td>
+                            <td>
+                                <label for="lbPasatiempo">¿Cu&aacute;l es su pasatiempo favorito?</label>
+                                <br>
+                                <input type="text" name="txtPasatiempo" id="txtPasatiempo">
+                            </td>
+                            <tr>
+                                <td colspan="3">
+                                    <label for="lbMeta">¿Cu&aacute;l es su meta en la vida?</label>
+                                    <br>
+                                    <input type="text" name="txtMeta" id="txtMeta">
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset style="width: 990px">
+                <!--tabla 5 DATOS FAMILIARES-->
+                <legend>Documentaci&oacute;n</legend>
+                <table border="1">
+                    <tdoby>
+                        <tr>
+                            <th width="350">Nombre</th>
+                            <th width="100">Vive</th>
+                            <th width="100">Fin</th>
+                            <th width="350">Domicilio</th>
+                            <th width="350">Ocupaci&oacute;n</th>
+                        </tr>
+                        <tr>
+                            <td>Padre
+                                <br>
+                                <input type="text" name="txtPadreNombre" id="txtPadreNombre">
+                            </td>
+                            
+                            <td>
+                                <input type="text" name="txtPadreVive" id="txtPadreVive">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPadreFin" id="txtPadreFin">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPadreDomicilio" id="txtPadreDomicilio">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPadreOcupacion" id="txtPadreOcupacion">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Madre
+                                <br>
+                                <input type="text" name="txtMadreNombre" id="txtMadreNombre">
+                            </td>
+                            
+                            <td>
+                                <input type="text" name="txtMadreVive" id="MadreVive">
+                            </td>
+                            <td>
+                                <input type="text" name="txtMadreFin" id="txtMadreFin">
+                            </td>
+                            <td>
+                                <input type="text" name="txtMadreDomicilio" id="txtMadreDomicilio">
+                            </td>
+                            <td>
+                                <input type="text" name="txtMadreOcupacion" id="txtMadreOcupacion">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Esposa(o)
+                                <br>
+                                <input type="text" name="txtConyugeNombre" id="txtConyugeNombre">
+                            </td>
+                            
+                            <td>
+                                <input type="text" name="txtConyugeVive" id="txtConyugeVive">
+                            </td>
+                            <td>
+                                <input type="text" name="txtConyugeFin" id="txtConyugeFin">
+                            </td>
+                            <td>
+                                <input type="text" name="txtConyugeDomicilio" id="txtConyugeDomicilio">
+                            </td>
+                            <td>
+                                <input type="text" name="txtConyugeOcupacion" id="txtConyugeOcupacion">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Nombre y edades de los hijos
+                            <input type="text" name="txtHijos" id="txtHijos">
+                        </td>
+                        </tr>
+                    </tdoby>
+                </table>
+            </fieldset>
+            <fieldset style="width: 990px">
+                <!--tabla 5 ESCOLARIDAD-->
+                <legend>Documentaci&oacute;n</legend>
+                <table border="1">
+                    <tdoby>
+                        <tr>
+                            <th width="300">Nombre</th>
+                            <th width="300">Direcci&oacute;n</th>
+                            <th width="50">De</th>
+                            <th width="50">A</th>
+                            <th width="50">Años</th>
+                            <th width="150">Titulo Recibido</th>
+                        </tr>
+                        <tr>
+                            <td>Primaria</td>
+                            <td>
+                                <input type="text" name="txtPrimariaNombre" id="txtPrimariaNombre">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPrimariaDireccion" id="txtPrimariaDireccion">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPrimariaIngreso" id="txtPrimariaIngreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPrimariaEgreso" id="txtConyugeEgreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPrimariaAños" id="txtPrimariaAños">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPrimariaTitulo" id="txtPrimariaTitulo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Secundaria</td>
+                            <td>
+                                <input type="text" name="txtSecundariaNombre" id="txtSecundariaNombre">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPSecundariaDireccion" id="txtSecundariaDireccion">
+                            </td>
+                            <td>
+                                <input type="text" name="txtSecundariaIngreso" id="txtSecundariaIngreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtSecundariaEgreso" id="txtSecundariaEgreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtSecundariaAños" id="txtSecundariaAños">
+                            </td>
+                            <td>
+                                <input type="text" name="txtSecundariaTitulo" id="txtSecundariaTitulo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Preparatoria o vocacional</td>
+                            <td>
+                                <input type="text" name="txtPreparatoriaNombre" id="txtPreparatoriaNombre">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPreparatoriaDireccion" id="txtPreparatoriaDireccion">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPreparatoriaIngreso" id="txtPreparatoriaIngreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPreparatoriaEgreso" id="txtPreparatoriaEgreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPreparatoriaAños" id="txtPreparatoriaAños">
+                            </td>
+                            <td>
+                                <input type="text" name="txtPreparatoriaTitulo" id="txtPreparatoriaTitulo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Profesional</td>
+                            <td>
+                                <input type="text" name="txtProfesionalNombre" id="txtProfesionalNombre">
+                            </td>
+                            <td>
+                                <input type="text" name="txtProfesionalDireccion" id="txtProfesionalDireccion">
+                            </td>
+                            <td>
+                                <input type="text" name="txtProfesionalIngreso" id="txtProfesionalIngreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtProfesionalEgreso" id="txtProfesionalEgreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtProfesionalAños" id="txtProfesionalAños">
+                            </td>
+                            <td>
+                                <input type="text" name="txtProfesionalTitulo" id="txtProfesionalTitulo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Comercial u otras</td>
+                            <td>
+                                <input type="text" name="txtComercialNombre" id="txtComercialNombre">
+                            </td>
+                            <td>
+                                <input type="text" name="txtComercialDireccion" id="txtComercialDireccion">
+                            </td>
+                            <td>
+                                <input type="text" name="txtComercialIngreso" id="txtComercialIngreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtComercialEgreso" id="txtComercialEgreso">
+                            </td>
+                            <td>
+                                <input type="text" name="txtComercialAños" id="txtComercialAños">
+                            </td>
+                            <td>
+                                <input type="text" name="txtComercialTitulo" id="txtComercialTitulo">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td width="1000" colspan="6">Estudios que esta efectuando en la actualidad
+                            <br>
+                            <input type="text" name="txtEstudiosActuales" id="txtEstudiosActuales">
+                            <br>
+                            Escuela&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Horario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Curso o Carrera&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Grado
+                            </td>
+                        </tr>
+                    </tdoby>
+                </table>
+            </fieldset>
+            <fieldset style="width: 990px">
+                <!--tabla 1b CONOCIMIENTOS GENERALES-->
+                <legend>Conocimientos Generales</legend>
+                <table border="1">
+                
+                    <tr>
+                        <tr><!--Fila 1-->
+                            <td width="500">
+                                <label for="lbIdiomas">Que idiomas habla
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    (Nivel 50%, 75%, 100%)    
+                                </label>
+                                <br>
+                                <input type="text" widht="500">
+                            </td>
+                            <td width="500">
+                                <label for="lbFunciones">Funciones de oficina que domina</label>
+                                <br>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 2-->
+                            <td width="500">
+                                <label for="lbMaquinasManeja">Maquina de Oficina o taller que sepa manejar</label>
+                                <br>
+                                <input type="text">
+                            </td>
+                            <td width="500">
+                                <label for="lbSoftwareConocido">Software que conoce</label>
+                                <br>
+                                <input type="text" widht="500">
+                            </td>
+                        <tr><!--Fila 3-->
+                            <td width="900" colspan="2">
+                                <label for="lbOtrosTrabajos">Otros trabajos o funciones que domina</label>
+                                <br>
+                                <input type="text">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset style="width:990px"> 
+                <legend>Empleo Actual y Anteriores</legend>
+                <table border="1">
+                    <tbody>
+                        <tr><!--Fila 1-->
+                            <th>Concepto</th>
+                            <th>Actual o &uacute;ltimo</th>
+                            <th>Anterior</th>
+                            <th>Anterior</th>
+                            <th>Anterior</th>
+                        </tr>
+                        <tr><!--Fila 2-->
+                            <td>    
+                                <label for="lbTiempoServicios">Tiempo que presto sus servicios</label>
+                            </td>
+                            <td>
+                                <label for="lbTiempoServicios1">de&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a</label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbTiempoServicios2">de&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a</label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbTiempoServicios3">de&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a</label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbTiempoServicios4">de&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a</label>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 3-->
+                            <td>
+                                <label for="lbCompañia">Nombre de la compañia</label>
+                            </td>
+                            <td>
+                                <label for="lbCompañia1"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañia2"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañia3"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañia4"></label>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 4-->
+                            <td>
+                                <label for="lbCompañiaDireccion">Direcci&oacute;</label>
+                            </td>
+                            <td>
+                                <label for="lbCompañiaDireccion1"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaDireccion2"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaDireccion3"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaDireccion4"></label>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 5-->
+                            <td>
+                                <label for="lbCompañiaTel">Tel&eacute;fono</label>
+                            </td>
+                            <td>
+                                <label for="lbCompañiaTel1"></label>
+                                <input type="tel">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaTel2"></label>
+                                <input type="tel">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaTel3"></label>
+                                <input type="tel">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaTel4"></label>
+                                <input type="tel">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 6-->
+                            <td>
+                                <label for="lbCompañiaPuesto">Puesto desempeñado</label>
+                            </td>
+                            <td>
+                                <label for="lbCompañiaPuesto1"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaPuesto2"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaPuesto3"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaPuesto4"></label>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 7-->
+                            <td>
+                                <label for="lbCompañiaSueldo">Sueldo Mensual</label>
+                            </td>
+                            <td>
+                                <label for="lbCompañiaSueldo1"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaSueldo2"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaSueldo3"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaSueldo4"></label>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 8-->
+                            <td>
+                                <label for="lbCompañiaSeparacion">Motivo de Separaci&oacute;n</label>
+                            </td>
+                            <td>
+                                <label for="lbCompañiaSeparacion1"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaSeparacion2"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaSeparacion3"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaSeparacion4"></label>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 9-->
+                            <td>
+                                <label for="lbCompañiaJefe">Nombre de su jefe directo</label>
+                            </td>
+                            <td>
+                                <label for="lbCompañiaJefe1"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaJefe2"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaJefe3"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaJefe4"></label>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 10-->
+                            <td>
+                                <label for="lbCompañiaPuestoJefe">Puesto de su jefe directo</label>
+                            </td>
+                            <td>
+                                <label for="lbCompañiaPuestoJefe1"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaPuestoJefe2"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaPuestoJefe3"></label>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <label for="lbCompañiaPuestoJefe4"></label>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 11-->
+                            <td>
+                                <label for="lbCompañiaInformes">Podemos solicitar informes de usted</label>
+                                <br>
+                                <input type="radio" value="si">Si
+                                <br>
+                                <input type="radio" value="no">No (razones)
+                            </td>
+                            <td colspan="4">
+                                <label for="lbCompañiaComentariosJefe">Comentarios de sus jefes</label>
+                                <br>
+                                <input type="text">
+                            </td>
+                        </tr>
+
+                        
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset style="width:990px">
+                <legend>
+                    Referencias Personales (Favor de no inckuir a jefes anteriores)
+                </legend>
+                <table>
+                    <tbody>
+                        <tr><!--Fila 1-->
+                            <th>Nombre</th>
+                            <th>Domicilio</th>
+                            <th>Tel&eacute;fono</th>
+                            <th>Ocupaci&oacute;n</th>
+                            <th>Tiempo de Conocerlo</th>
+                            
+                        </tr>
+                        <tr><!--Fila 2-->
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasNombre" id="txtReferenciasNombre">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasDomicilio" id="txtReferenciasDomicilio">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasTelefono" id="txtReferenciasTelefono">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasOcupacion" id="txtReferenciasOcupacion">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasTiempo" id="txtReferenciasTiempo">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 3-->
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasNombre1" id="txtReferenciasNombre1">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasDomicilio1" id="txtReferenciasDomicilio1">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasTelefono1" id="txtReferenciasTelefono1">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasOcupacion1" id="txtReferenciasOcupacion1">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasTiempo1" id="txtReferenciasTiempo1">
+                            </td>
+                        </tr>
+                        <tr><!--Fila 3-->
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasNombre2" id="txtReferenciasNombre2">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasDomicilio2" id="txtReferenciasDomicilio2">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasTelefono2" id="txtReferenciasTelefono2">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasOcupacion2" id="txtReferenciasOcupacion2">
+                            </td>
+                            <td>
+                                
+                                <input type="text" name="txtReferenciasTiempo2" id="txtReferenciasTiempo2">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <fieldset style="width:990px">
+                <legend>Datos Generales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datos Econ&oacute;micos
+                </legend>
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td width="500">
+                                <label for="lbGeneralesEmpleo">¿C&oacute;mo supo de este empleo?</label>
+                                <br>
+                                <input type="radio" value="anuncio">Anuncio
+                                <input type="radio" value="otro">Otro medio (anotelo)
+                                <input type="text" name="txtGeneralesEmpleo" id="txtGeneralesEmpleo">
+                            </td>
+                            <td width="400">
+                                <label for="lbEconomicosIngresos">¿Tiene usted otros ingresos?</label>
+                                
+                                <br>
+                                <input type="radio" value="no">No
+                                <input type="radio" value="si">Si (describalo)
+                                <input type="text" name="txtEconomicosIngresos" id="txtEconomicosIngresos">
+                                
+                                
+                            </td>
+                            <td>
+                                <label align="right" for="lbImporteMensual">Importe Mensual</label>
+                                <input align="right" type="number" name="txtImporteMensual" id="txtImporteMensual">
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td width="500">
+                                <label for="lbGeneralesParientes">¿Tiene parientes trabajando en esta esmpresa?</label>
+                                <br>
+                                <input type="radio" value="si">Si (¿d&oacute;nde?)
+                                <input type="radio" value="no">No 
+                                
+                            </td>
+                            <td width="400">
+                                <label for="lbEconomicosConyuge">¿Su c&oacute;nyuge trabaja?</label>
+                                <br>
+                                <input type="radio" value="anuncio">Anuncio
+                                <input type="radio" value="otro">Otro medio (anotelo)
+                                <input type="text" name="txtEconomicosIngresos" id="txtEconomicosIngresos">
+                            </td>
+                            <td>
+                                <label align="right" for="lbPercepcionMensual">Importe Mensual</label>
+                                <input align="right" type="number" name="txtPercepcionMensual" id="txtPercepcionMensual">
+                            </td>
+                        </tr>    
+
+                            <td width="500">
+                                <label for="lbGeneralesAfianzado">¿Ha estado afianzado?</label>
+                                <br>
+                                <input type="radio" value="si">Si (nombre de la Cia)
+                                <input type="text" name="txtGeneralesAfianzado" id="txtGeneralesAfianzado">
+                                <input type="radio" value="no">No 
+                                
+                            </td>
+                            <td width="400">
+                                <label for="lbEconomicosCasa">¿Vive en casa propia?</label>
+                                <br>
+                                <input type="radio" value="si">Si
+                                <input type="radio" value="no">No 
+                                
+                            </td>
+                            <td>
+                                <label align="right" for="lbValorAproximado">Valor Aproximado</label>
+                                <input align="right" type="number" name="txtValorAproximado" id="txtValorAproximado">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="500">
+                                <label for="lbGeneralesSindicato">¿Ha estado afiliado a alg&uacute;n sindicato?</label>
+                                <br>
+                                <input type="radio" value="si">Si (¿Cu&aacute;l?)
+                                <input type="text" name="txtGeneralesSindicato" id="txtGeneralesSindicato">
+                                <input type="radio" value="no">No 
+                                
+                            </td>
+                            <td width="400">
+                                <label for="lbEconomicosRenta">¿Paga renta?</label>
+                                <br>
+                                <input type="radio" value="si">Si
+                                <input type="radio" value="no">No 
+                                
+                            </td>
+                            
+                            <td>
+                                <label align="right" for="lbRentaMensual">Renta Mensual</label>
+                                <input align="right" type="number" name="txtRentaMensual" id="txtRentaMensual">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="500">
+                                <label for="lbGeneralesSeguro">¿Tiene seguro de vida?</label>
+                                <br>
+                                <input type="radio" value="si">Si (nombre de la Cia)
+                                <input type="text" name="txtGeneralesSeguro" id="txtGeneralesSeguro">
+                                <input type="radio" value="no">No 
+                                
+                            </td>
+                            <td width="400">
+                                <label for="lbEconomicosAutomovil">¿Tiene automovil propio?</label>
+                                <br>
+                                <input type="radio" value="si">Si
+                                <input type="radio" value="no">No 
+                                
+                            </td>
+                            
+                            <td>
+                                <label align="right" for="lbModelo">Modelo</label>
+                                <input align="right" type="text" name="txtModelo" id="txtModelo">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="500">
+                                <label for="lbGeneralesViajar">¿Puede viajar?</label>
+                                <br>
+                                <input type="radio" value="no">No (razones)
+                                <input type="text" name="txtGeneralesSindicato" id="txtGeneralesSindicato">
+                                <input type="radio" value="si">Si
+                                
+                            </td>
+                            <td width="400">
+                                <label for="lbEconomicosDeudas">¿Tiene deudas?</label>
+                                <br>
+                                <input type="radio" value="si">Si (¿Con qui&eacute;n)
+                                <input type="text" name="txtEconomicosDeudas" id="txtEconomicosDeudas">
+                                <input type="radio" value="no">No 
+                                
+                            </td>
+                            
+                            <td>
+                                <label align="right" for="lbImporte">Importe</label>
+                                <input align="right" type="number" name="txtImporte" id="txtImporte">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="500">
+                                <label for="lbGeneralesMudanza">¿Esta dispuesto a cambiar de lugar de residencia?</label>
+                                <br>
+                                <input type="radio" value="no">No (razones)
+                                <input type="text" name="txtGeneralesMudanza" id="txtGeneralesMudanza">
+                                <input type="radio" value="si">Si
+                                
+                            </td>
+                            <td width="400" colspan="2">
+                                <label for="lbEconomicosAbono">¿Cuanto abona mensualmente?</label>
+                                <br>
+                                <input type="radio" value="no">No (razones)
+                                <input type="number" name="txtEconomicosAbono" id="txtEconomicosAbono">
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td width="500">
+                                <label for="lbGeneralesFechaComienzo">Fecha en que podr&iacute;a presentarse a trabajar</label>
+                                <br>
+                                <input type="date" name="txtGeneralesFechaComienzo" id="txtGeneralesFechaComienzo">
+                            </td>
+                            <td width="500" colspan="2">
+                                <label for="lbEconomicosGastos">¿A cu&aacute;nto ascienden sus gastos mensuales?</label>
+                                <br>
+                                <input type="number" name="txtEconomicosGastos" id="txtEconomicosGastos">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <div>
+                <table border="1" style="float: left">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label>Comentarios de entrevistador y firma</label>
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td width="500">
+                                <input type="text" name="txtComentarios" id="txtComentarios">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="500">
+                                <input type="text" name="txtComentarios1" id="txtComentarios1">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table border="1" style="float: left" >
+                    <tbody>
+                        <tr>
+                            <td width="450">
+                                <p align="center">
+                                    Hago constar que mis respuestas son verdaderas
+                                </p>
+                                <br>
+                                <hr>
+                                <p align="center">
+                                    Firma del solicitante
+                                </p>  
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </form>
+    </section>
+    
+</body>
+</html>
